@@ -18,7 +18,7 @@ container:
 #
 #   - NAME: name of container. default: mm-go
 boot: create
-	docker start -ai ${NAME} --env-file .env
+	docker start -ai ${NAME}
 
 # create the Docker container
 #
