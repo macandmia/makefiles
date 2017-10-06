@@ -18,7 +18,7 @@ container:
 #
 #   - NAME: name of container. default: mm-go
 boot: create
-	docker start -ai ${NAME}
+	docker start -ai ${NAME} --env-file .env
 
 # create the Docker container
 #
@@ -26,7 +26,7 @@ boot: create
 #
 #   - NAME: name of container. default: mm-go
 create: destroy container
-	docker create -it --init --name "${NAME}" ${IMG}
+	docker create --env-file .env -it --init --name "${NAME}" ${IMG}
 
 # destroy the Docker container
 #
@@ -34,7 +34,7 @@ create: destroy container
 #
 #   - NAME: name of container. default: mm-subscribers
 destroy:
-	docker rm -v $(shell docker ps -aqf "name=${NAME}") --env-file .env || (exit 0)
+	docker rm -v $(shell docker ps -aqf "name=${NAME}") || (exit 0)
 
 # tag container
 #
