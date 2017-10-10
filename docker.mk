@@ -26,8 +26,7 @@ boot: create
 #
 #   - NAME: name of container. default: mm-go
 create: destroy container
-	@echo ${CURDIR}/.env
-	docker create --env-file .env -it --init --name "${NAME}" ${IMG}
+	docker create --env-file ${CURDIR}/.env -it --init --name "${NAME}" ${IMG}
 
 # destroy the Docker container
 #
