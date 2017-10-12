@@ -34,6 +34,7 @@ create: destroy container
 #
 #   - NAME: name of container. default: mm-subscribers
 destroy:
+	docker stop ${NAME} || (exit 0)
 	docker rm -v $(shell docker ps -aqf "name=${NAME}") || (exit 0)
 
 # tag container
