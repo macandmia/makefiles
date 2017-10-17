@@ -25,7 +25,6 @@ preflight: pipelines_check
 	git -C ${PROJECT_DIR} status | grep 'On branch master'
 	git -C ${PROJECT_DIR} status | grep "Your branch is up-to-date with 'origin/master'."
 	git -C ${PROJECT_DIR} status | grep 'nothing to commit, working tree clean'
-endif
 
 pipelines_check:
 ifndef PROJECT_DIR
