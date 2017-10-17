@@ -14,12 +14,10 @@ staging: preflight
 production: pipelines_check
 	heroku pipelines:promote -a ${STAGING_APP}
 
-# add heroku remotes
 remotes: pipelines_check
 	heroku git:remote -a ${STAGING_APP} -r staging
 	heroku git:remote -a ${PRODUCTION_APP} -r production
 
-# preflight checks if your working copy is up-to-date with origin master
 preflight: pipelines_check
 	git -C ${PROJECT_DIR} fetch origin
 	git -C ${PROJECT_DIR} status | grep 'On branch master'
