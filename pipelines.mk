@@ -1,6 +1,6 @@
 # Include this in the Makefile of projects that use heroku-pipelines for deployment.
 #
-#    include github.com/macandmia/makefiles/pipelines
+#    include github.com/xentek/makefiles/pipelines
 #
 # PLEASE NOTE: you must set PROJECT_DIR, STAGING_APP, PRODUCTION_APP vars in your project's Makefile.
 
