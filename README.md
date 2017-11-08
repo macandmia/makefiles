@@ -9,4 +9,4 @@ Depends on [mmake](https://github.com/tj/mmake).
 
 To include common docker commands in your project's `Makefile`, add this:
 
-    include github.com/macandmia/makefiles/docker
+    include github.com/xentek/makefiles/docker
