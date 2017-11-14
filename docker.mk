@@ -1,7 +1,7 @@
 # Include this in the Makefile of projects that use docker, but aren't
 # publishing a docker base image for other projects to use.
 #
-#    include github.com/macandmia/makefiles/docker
+#    include github.com/xentek/makefiles/docker
 #
 # PLEASE NOTE: you must set NAME and IMG vars in your project's Makefile
 

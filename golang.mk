@@ -1,7 +1,7 @@
 # Include this in the Makefile of projects written in
 # golang that use glide for dependency management.
 #
-#    include github.com/macandmia/makefiles/golang
+#    include github.com/xentek/makefiles/golang
 #
 # PLEASE NOTE: you must set PKG_NAME var in your project's Makefile.
 
