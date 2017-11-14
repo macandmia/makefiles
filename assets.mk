@@ -15,7 +15,7 @@ ifndef $(1)
 else
 	${PKG_UPGRADER} $(2)
 endif
-enddef
+endef
 
 install-sassc:
 	$(call install_pkg, SASSC, sassc)
