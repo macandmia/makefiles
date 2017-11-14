@@ -1,7 +1,6 @@
 .PHONY: install-convert install-jpegtran install-optipng install-png2ico install-sassc
 
 PKG_INSTALLER := brew install
-PKG_UPGRADER := brew upgrade
 
 SASSC := $(shell command -v sassc 2> /dev/null)
 OPTIPNG := $(shell command -v optipng 2> /dev/null)
@@ -10,7 +9,7 @@ JPEGTRAN := $(shell command -v jpegtran 2> /dev/null)
 CONVERT := $(shell command -v convert 2> /dev/null)
 
 define install_pkg
-	$(if $(1), $(PKG_UPGRADER) $(2), $(PKG_INSTALLER) $(2))
+	$(if $(1), @ echo "Already Installed: ${2}", $(PKG_INSTALLER) $(2))
 endef
 
 install-sassc:
