@@ -10,24 +10,20 @@ JPEGTRAN := $(shell command -v jpegtran 2> /dev/null)
 CONVERT := $(shell command -v convert 2> /dev/null)
 
 define install_pkg
-ifndef $(1)
-	${PKG_INSTALLER} $(2)
-else
-	${PKG_UPGRADER} $(2)
-endif
+	$(if $(1), ${PKG_INSTALLER} $(2), ${PKG_UPGRADER} $(2))
 endef
 
 install-sassc:
-	$(call install_pkg, SASSC, sassc)
+	$(call install_pkg, $(SASSC), sassc)
 
 install-optipng:
-	$(call install_pkg, OPTIPNG, optipng)
+	$(call install_pkg, $(OPTIPNG), optipng)
 
 install-png2ico:
-	$(call install_pkg, PNG2ICO, png2ico)
+	$(call install_pkg, $(PNG2ICO), png2ico)
 
 install-jpegtran:
-	$(call install_pkg, JPEGTRAN, libjpeg)
+	$(call install_pkg, $(JPEGTRAN), libjpeg)
 
 install-convert:
-	$(call install_pkg, CONVERT, imagemagick)
+	$(call install_pkg, $(CONVERT), imagemagick)
