@@ -1,6 +1,8 @@
-.PHONY: install-sassc
+.PHONY: install-convert install-jpegtran install-optipng install-png2ico install-sassc
+
 PKG_INSTALLER := "brew install"
 PKG_UPGRADER := "brew upgrade"
+
 SASSC := $(shell command -v sassc 2> /dev/null)
 OPTIPNG := $(shell command -v optipng 2> /dev/null)
 PNG2ICO := $(shell command -v png2ico 2> /dev/null)
