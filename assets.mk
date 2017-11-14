@@ -10,7 +10,8 @@ JPEGTRAN := $(shell command -v jpegtran 2> /dev/null)
 CONVERT := $(shell command -v convert 2> /dev/null)
 
 define install_pkg
-	$(if $(1), ${PKG_UPGRADER} $(2), ${PKG_INSTALLER} $(2))
+	@ echo $(1)
+	$(if $(1), $(PKG_UPGRADER) $(2), $(PKG_INSTALLER) $(2))
 endef
 
 install-sassc:
