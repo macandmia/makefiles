@@ -1,3 +1,7 @@
+# Include this in the Makefile of projects that build front-end assets
+#
+#    include github.com/xentek/makefiles/assets
+
 .PHONY: install-convert install-jpegtran install-optipng install-png2ico install-sassc
 
 PKG_INSTALLER := brew install
