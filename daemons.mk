@@ -3,7 +3,7 @@
 #
 #    include github.com/xentek/makefiles/daemons
 
-.PHONY: install-convert install-jpegtran install-optipng install-png2ico install-sassc
+.PHONY: install-postgres install-mysql install-redis install-memcached
 
 UNAME = $(shell uname)
 ifeq ($(UNAME), Linux)
