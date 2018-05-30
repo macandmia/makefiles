@@ -28,12 +28,6 @@ MYSQL     := $(shell command -v mysql 2> /dev/null)
 REDIS     := $(shell command -v redis-server 2> /dev/null)
 MEMCACHED := $(shell command -v memcached 2> /dev/null)
 
-SASSC := $(shell command -v sassc 2> /dev/null)
-OPTIPNG := $(shell command -v optipng 2> /dev/null)
-PNG2ICO := $(shell command -v png2ico 2> /dev/null)
-JPEGTRAN := $(shell command -v jpegtran 2> /dev/null)
-CONVERT := $(shell command -v convert 2> /dev/null)
-
 define install_pkg
 	$(if $(1), @ echo "Already Installed: ${2}", $(PKG_INSTALLER) $(2))
 endef
