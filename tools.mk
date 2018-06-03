@@ -12,6 +12,7 @@ endif
 ifeq ($(UNAME), Darwin)
 	# assumes osx
 	PKG_INSTALLER := brew install
+
 endif
 PKG_INSTALLER := brew install
 
@@ -24,3 +25,7 @@ endef
 
 install-jq:
 	$(call install_pkg, $(JQ), jq)
+
+install-pipenv:
+	$(if $(filter ${UNAME}, Linux), echo "Running Linux", echo "Running Mac"))
+	$(call install_pkg, $(PIPENV), pipenv)
