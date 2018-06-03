@@ -27,5 +27,5 @@ install-jq:
 	$(call install_pkg, $(JQ), jq)
 
 install-pipenv:
-	$(if $(filter ${UNAME}, Linux), echo "Running Linux", echo "Running Mac"))
+	$(if $(filter ${UNAME}, Linux), echo "Running Linux", echo "Running Mac")
 	$(call install_pkg, $(PIPENV), pipenv)
